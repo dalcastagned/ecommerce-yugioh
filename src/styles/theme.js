@@ -2,7 +2,7 @@ export const lightTheme = {
     background: '#fff',
     border: '#bbb',
     mobileMenuBackground: '#eee',
-    menuItemHover: '#bbb',
+    menuItemHover: '#000',
     text: '#000',
     buttonThemeBackground: '#0A1929',
     buttonThemeTextColor: '#fff'

@@ -53,12 +53,12 @@ const Navbar = ({ isDarkTheme, setIsDarkTheme }) => {
                                 </div>
                             </NavLinksDesktop>
                         </NavItemDesktop>
-                        <li>
+                        <NavItemDesktop>
                             {isDarkTheme
                                 ? <ThemeButton onClick={changeTheme}><LightIcon /></ThemeButton>
                                 : <ThemeButton onClick={changeTheme}><DarkIcon /> </ThemeButton>
                             }
-                        </li>
+                        </NavItemDesktop>
                     </NavMenuDesktop>
                 </NavbarContainerDesktop>
             </NavDesktop>

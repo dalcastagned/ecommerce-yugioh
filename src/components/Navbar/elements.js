@@ -83,6 +83,8 @@ export const NavMenuMobile = styled.ul`
 export const NavItemDesktop = styled.li`
     height: 80px;
     border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
 
     &:hover{
         border-bottom: 2px solid ${(props) => props.theme.menuItemHover};
@@ -162,6 +164,7 @@ export const ThemeButton = styled.button`
     &:hover{
         transition: all 0.3s easy-out;
     }
+    
 `
 
 export const DarkIcon = styled(FaMoon)`
