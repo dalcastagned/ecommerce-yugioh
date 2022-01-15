@@ -1,6 +1,6 @@
 export const lightTheme = {
     background: '#fff',
-    border: '#eee',
+    border: '#bbb',
     mobileMenuBackground: '#eee',
     menuItemHover: '#bbb',
     text: '#000',
