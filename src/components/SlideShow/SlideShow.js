@@ -34,7 +34,9 @@ const SlideShow = ({ cards }) => {
     <Container>
       <ContainerTitle>
         <h1 onClick={() => navigate("/card/" + cards[0].race)}>{`Raça: ${cards[0].race}`}</h1>
-        <button onClick={() => navigate("/card/" + cards[0].race)}>Ver Mais</button>
+        <button onClick={() => navigate("/card/" + cards[0].race)}>
+          Ver Mais
+        </button>
       </ContainerTitle>
       <AliceCarousel mouseTracking disableButtonsControls={true} items={items} responsive={responsive} disableDotsControls={true} paddingRight={10} />
     </Container>

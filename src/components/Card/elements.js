@@ -52,11 +52,13 @@ export const ContainerCarousel = styled.div`
 export const AddCartIcon = styled(FaCartPlus)`
     color: ${(props) => props.theme.text};
     font-size: 25px;
+    cursor: pointer;
 `
 
 export const AddFavIcon = styled(FaHeart)`
     color: ${(props) => props.theme.text};
     font-size: 25px;
+    cursor: pointer;
 `
 
 export const ContainerButtons = styled.div`
