@@ -6,7 +6,7 @@ export const Container = styled.div`
 `
 
 export const ContainerCarousel = styled.div`
-    width: 150px;
+    width: 250px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -14,9 +14,22 @@ export const ContainerCarousel = styled.div`
     border: 2px solid ${(props) => props.theme.text};
     padding: 10px;
     height: 320px;
+  
+    @media screen and (max-width: 530px){
+            width: 450px;
+        }
+
+    @media screen and (max-width: 480px){
+            width: 350px;
+        }
+        
+    @media screen and (max-width: 380px){
+            width: 250px;
+        }
 
     img{
-        width: 130px;
+        width: 120px;
+        padding-top: 10px;
     }
 
     h1 {
@@ -25,12 +38,12 @@ export const ContainerCarousel = styled.div`
         font-size: 15px;
         text-align: center;
         padding-top: 10px;
-        height: 44px;
     }
 
     p {
         color: ${(props) => props.theme.text};
         font-weight: bold;
+        padding-top: 20px;
     }
 
     span {
