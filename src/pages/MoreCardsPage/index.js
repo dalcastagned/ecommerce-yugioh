@@ -19,6 +19,7 @@ const MoreCardsPage = () => {
             .then((data) => {
                 setCards([...cards, ...data]);
             })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [params.race, currentPage]);
 
     useEffect(() => {
