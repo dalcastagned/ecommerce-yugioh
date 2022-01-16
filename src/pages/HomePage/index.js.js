@@ -1,10 +1,31 @@
 import React from 'react'
+import CardsCarousel from '../../components/CardsCarousel'
 
-const HomePage = () => {
+const TYPES = [
+    "Aqua",
+    "Beast-Warrior",
+    "Cyberse",
+    "Dinosaur",
+    "Dragon",
+    "Fairy",
+    "Fish",
+    "Insect",
+    "Machine",
+    "Plant",
+    "Rock",
+    "Warrior",
+    "Spellcaster"
+];
+
+const HomePage = ({ isDarkTheme }) => {
     return (
-        <div>
-            Home
-        </div>
+        <section>
+            {
+                TYPES.map((type, index) =>
+                    <CardsCarousel key={index} race={type} isDarkTheme={isDarkTheme} />
+                )
+            }
+        </section>
     )
 }
 

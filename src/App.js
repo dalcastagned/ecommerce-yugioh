@@ -27,13 +27,13 @@ function App() {
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Router>
         <GlobalStyle />
-        <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />     
+        <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
         <Routes>
-          <Route path="/" element={<HomePage/>} />
-          <Route path="/carrinho" element={<CartPage/>} />
-          <Route path="/favoritos" element={<FavoritesPage/>} />
-          <Route path="/card/:id" element={<CardDetailsPage/>} />
-          <Route path="/card/:race" element={<MoreCardsPage/>} />
+          <Route path="/" element={<HomePage isDarkTheme={isDarkTheme} />} />
+          <Route path="/carrinho" element={<CartPage isDarkTheme={isDarkTheme} />} />
+          <Route path="/favoritos" element={<FavoritesPage isDarkTheme={isDarkTheme} />} />
+          <Route path="/card/:race/:id" element={<CardDetailsPage isDarkTheme={isDarkTheme} />} />
+          <Route path="/card/:race" element={<MoreCardsPage isDarkTheme={isDarkTheme} />} />
         </Routes>
       </Router>
     </ThemeProvider>
