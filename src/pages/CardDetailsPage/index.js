@@ -6,6 +6,24 @@ import {
     ErrorImg,
     LoadingIMG,
 } from '../../styles/globalStyles'
+import {
+    Container,
+    Title,
+    CardImage,
+    ContainerDescription,
+    ContainerInfo,
+    Description,
+    Level,
+    Attribute,
+    Race,
+    Type,
+    Attack,
+    Defense,
+    Price,
+    ContainerButtons,
+    AddCartIcon,
+    AddFavIcon
+} from './elements'
 
 const CardDetailsPage = ({ isDarkTheme }) => {
 
@@ -45,18 +63,26 @@ const CardDetailsPage = ({ isDarkTheme }) => {
         )
     } else {
         return (
-            <div>
-                <h1>{cardInfo[0].name}</h1>
-                <img alt={`Card ${cardInfo[0].name}`} src={cardInfo[0].card_images[0].image_url} />
-                <p>{`Descrição: ${cardInfo[0].desc}`}</p>
-                <p>{`Carta de nível ${cardInfo[0].level}`}</p>
-                <p>{`Atributo: ${cardInfo[0].attribute}`}</p>
-                <p>{`Raça: ${cardInfo[0].race}`}</p>
-                <p>{`Tipo: ${cardInfo[0].type}`}</p>
-                <p>{`Ataque: ${cardInfo[0].atk}`}</p>
-                <p>{`Defesa: ${cardInfo[0].def}`}</p>
-                <p>{`Preço: R$ ${cardInfo[0].card_prices[0].amazon_price}`}</p>
-            </div>
+            <Container>
+                <Title>{cardInfo[0].name}</Title>
+                <ContainerInfo>
+                    <CardImage alt={`Card ${cardInfo[0].name}`} src={cardInfo[0].card_images[0].image_url} />
+                    <ContainerDescription>
+                        <Description>{`Descrição: ${cardInfo[0].desc}`}</Description>
+                        <Level>{`Carta de nível ${cardInfo[0].level}`}</Level>
+                        <Race>{`Raça: ${cardInfo[0].race}`}</Race>
+                        <Attribute>{`Atributo: ${cardInfo[0].attribute}`}</Attribute>
+                        <Type>{`Tipo: ${cardInfo[0].type}`}</Type>
+                        <Attack>{`Ataque: ${cardInfo[0].atk}`}</Attack>
+                        <Defense>{`Defesa: ${cardInfo[0].def}`}</Defense>
+                        <Price>{`Preço: R$ ${cardInfo[0].card_prices[0].amazon_price}`}</Price>
+                        <ContainerButtons>
+                            <AddCartIcon />
+                            <AddFavIcon />
+                        </ContainerButtons>
+                    </ContainerDescription>
+                </ContainerInfo>
+            </Container>
         )
     }
 }

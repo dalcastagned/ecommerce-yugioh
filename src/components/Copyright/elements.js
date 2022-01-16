@@ -15,4 +15,5 @@ export const Footer = styled.div`
 
 export const FooterText = styled.p`
     color: ${(props) => props.theme.text}; 
+    font-size: 14px;
 `
