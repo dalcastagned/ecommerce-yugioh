@@ -1,5 +1,8 @@
 import React from 'react'
 import CardsCarousel from '../../components/CardsCarousel'
+import {
+    Title
+} from './elements'
 
 const TYPES = [
     "Aqua",
@@ -19,13 +22,16 @@ const TYPES = [
 
 const HomePage = ({ isDarkTheme }) => {
     return (
-        <section>
-            {
-                TYPES.map((type, index) =>
-                    <CardsCarousel key={index} race={type} isDarkTheme={isDarkTheme} />
-                )
-            }
-        </section>
+        <>
+            <Title>Bem-Vindo ao Ecommerce Exclusivo de Cartas do Yu-Gi-Oh!</Title>
+            <section>
+                {
+                    TYPES.map((type, index) =>
+                        <CardsCarousel key={index} race={type} isDarkTheme={isDarkTheme} />
+                    )
+                }
+            </section>
+        </>
     )
 }
 

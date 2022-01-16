@@ -11,7 +11,7 @@ export const ContainerCarousel = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    border: 2px solid ${(props) => props.theme.border};
+    border: 2px solid ${(props) => props.theme.text};
     padding: 10px;
     height: 320px;
 
@@ -30,6 +30,7 @@ export const ContainerCarousel = styled.div`
 
     p {
         color: ${(props) => props.theme.text};
+        font-weight: bold;
     }
 
     span {

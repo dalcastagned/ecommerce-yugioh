@@ -14,7 +14,7 @@ body {
     margin-top: 80px;
 
     @media screen and (max-width: 480px){
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 }
 
