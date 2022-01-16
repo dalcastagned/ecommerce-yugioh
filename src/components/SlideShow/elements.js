@@ -30,6 +30,7 @@ export const ContainerCarousel = styled.div`
     img{
         width: 120px;
         padding-top: 10px;
+        cursor: pointer;
     }
 
     h1 {

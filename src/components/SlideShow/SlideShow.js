@@ -27,7 +27,7 @@ const SlideShow = ({ cards }) => {
             : card.name
           }
         </h1>
-        <img key={index} src={card.card_images[0].image_url_small} alt="Card" onDragStart={handleDragStart} />
+        <img onClick={() => navigate(`/card/${card.race}/${card.id}`)} key={index} src={card.card_images[0].image_url_small} alt="Card" onDragStart={handleDragStart} />
           <p>R$<span>{card.card_prices[0].amazon_price}</span></p>
         <ContainerButtons>
           <AddCartIcon />
