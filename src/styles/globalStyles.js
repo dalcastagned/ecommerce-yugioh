@@ -24,7 +24,7 @@ export const Container = styled.div`
     min-height: calc(100vh - 155px);
   
     @media screen and (max-width: 480px){
-        min-height: calc(100vh - 215px);
+        min-height: calc(100vh - 235px);
     }
 `
 
@@ -45,7 +45,7 @@ export const ContainerImages = styled.div`
     width: 100%;
     
     @media screen and (max-width: 480px){
-        height: calc(100vh - 215px);
+        height: calc(100vh - 235px);
     }
 `
 

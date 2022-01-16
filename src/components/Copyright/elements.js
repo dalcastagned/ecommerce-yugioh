@@ -6,7 +6,7 @@ export const Footer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px 0 70px 0;
+    margin: 25px 0 90px 0;
     
     @media screen and (min-width: 480px){
         margin-bottom: 10px;

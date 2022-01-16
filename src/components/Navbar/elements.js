@@ -16,7 +16,7 @@ export const NavDesktop = styled.nav`
 
 export const NavMobile = styled.nav`
     background: ${(props) => props.theme.background};
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +101,7 @@ export const NavItemDesktop = styled.li`
 `
 
 export const NavItemMobile = styled.li`
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
