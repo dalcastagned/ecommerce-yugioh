@@ -41,8 +41,12 @@ export const ContainerImages = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 155px);
     width: 100%;
+    
+    @media screen and (max-width: 480px){
+        height: calc(100vh - 215px);
+    }
 `
 
 export default GlobalStyle
