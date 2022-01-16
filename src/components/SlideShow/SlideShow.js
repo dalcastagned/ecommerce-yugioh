@@ -2,38 +2,22 @@ import React from 'react'
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { useNavigate } from "react-router";
+import Card from '../Card';
 import {
   Container,
   ContainerTitle,
-  ContainerCarousel,
-  AddCartIcon,
-  AddFavIcon,
-  ContainerButtons,
 } from './elements'
 
 const SlideShow = ({ cards }) => {
 
-  const handleDragStart = (e) => e.preventDefault();
   const navigate = useNavigate();
 
   console.log(cards)
 
   const items =
     cards.map((card, index) => (
-      <ContainerCarousel>
-        <h1 onClick={() => navigate(`/card/${card.race}/${card.id}`)}>
-          {card.name.length > 28
-            ? card.name.substring(0, 25) + "..."
-            : card.name
-          }
-        </h1>
-        <img onClick={() => navigate(`/card/${card.race}/${card.id}`)} key={index} src={card.card_images[0].image_url_small} alt="Card" onDragStart={handleDragStart} />
-          <p>R$<span>{card.card_prices[0].amazon_price}</span></p>
-        <ContainerButtons>
-          <AddCartIcon />
-          <AddFavIcon />
-        </ContainerButtons>
-      </ContainerCarousel>))
+      <Card card={card} index={index} />
+    ))
 
   const responsive = {
     0: { items: 1 },
