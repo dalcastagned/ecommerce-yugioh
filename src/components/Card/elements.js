@@ -64,5 +64,5 @@ export const AddFavIcon = styled(FaHeart)`
 export const ContainerButtons = styled.div`
     display: flex;
     gap: 25px; 
-    padding-top: 20px;
+    padding-top: 10px;
 `

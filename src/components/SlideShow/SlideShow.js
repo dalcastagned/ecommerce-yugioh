@@ -12,8 +12,6 @@ const SlideShow = ({ cards }) => {
 
   const navigate = useNavigate();
 
-  console.log(cards)
-
   const items =
     cards.map((card, index) => (
       <Card card={card} index={index} />

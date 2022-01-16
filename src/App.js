@@ -3,6 +3,7 @@ import GlobalStyle, { Container } from "./styles/globalStyles";
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './styles/theme'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./utils/ScrollToTop";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage/index.js";
 import CartPage from "./pages/CartPage";
@@ -28,6 +29,7 @@ function App() {
       <Router>
         <GlobalStyle />
         <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
+        <ScrollToTop />
         <Container>
           <Routes>
             <Route path="/" element={<HomePage isDarkTheme={isDarkTheme} />} />
