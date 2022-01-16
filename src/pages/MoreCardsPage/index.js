@@ -13,7 +13,6 @@ const MoreCardsPage = () => {
     const params = useParams();
     const [cards, setCards] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    console.log(cards)
 
     useEffect(() => {
         getCards(`?race=${params.race}&_page=${currentPage}&_limit=15`)
@@ -38,9 +37,8 @@ const MoreCardsPage = () => {
             <ContainerCards>
                 {
                     cards.map((card, index) =>
-                        <div>
+                        <div key={index}>
                             <Card
-                                key={index}
                                 index={index}
                                 card={card}
                             />
