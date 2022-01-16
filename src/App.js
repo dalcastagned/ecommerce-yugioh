@@ -9,6 +9,7 @@ import CartPage from "./pages/CartPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import CardDetailsPage from "./pages/CardDetailsPage";
 import MoreCardsPage from "./pages/MoreCardsPage";
+import Copyright from "./components/Copyright";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/card/:race/:id" element={<CardDetailsPage isDarkTheme={isDarkTheme} />} />
           <Route path="/card/:race" element={<MoreCardsPage isDarkTheme={isDarkTheme} />} />
         </Routes>
+        <Copyright/>
       </Router>
     </ThemeProvider>
   );
