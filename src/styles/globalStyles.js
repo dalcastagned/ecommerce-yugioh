@@ -21,17 +21,10 @@ body {
 `;
 
 export const Container = styled.div`
-    z-index: 1;
-    width: 100%;
-    max-width: 100vw;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-
-    @media screen and (max-width: 991px) {  
-        padding-right: 30px;
-        padding-left: 30px; 
+    min-height: calc(100vh - 155px);
+  
+    @media screen and (max-width: 480px){
+        min-height: calc(100vh - 215px);
     }
 `
 

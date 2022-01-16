@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GlobalStyle from "./styles/globalStyles";
+import GlobalStyle, { Container } from "./styles/globalStyles";
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from './styles/theme'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -24,19 +24,20 @@ function App() {
   }, []);
 
   return (
-
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Router>
         <GlobalStyle />
         <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
-        <Routes>
-          <Route path="/" element={<HomePage isDarkTheme={isDarkTheme} />} />
-          <Route path="/carrinho" element={<CartPage isDarkTheme={isDarkTheme} />} />
-          <Route path="/favoritos" element={<FavoritesPage isDarkTheme={isDarkTheme} />} />
-          <Route path="/card/:race/:id" element={<CardDetailsPage isDarkTheme={isDarkTheme} />} />
-          <Route path="/card/:race" element={<MoreCardsPage isDarkTheme={isDarkTheme} />} />
-        </Routes>
-        <Copyright/>
+        <Container>
+          <Routes>
+            <Route path="/" element={<HomePage isDarkTheme={isDarkTheme} />} />
+            <Route path="/carrinho" element={<CartPage isDarkTheme={isDarkTheme} />} />
+            <Route path="/favoritos" element={<FavoritesPage isDarkTheme={isDarkTheme} />} />
+            <Route path="/card/:race/:id" element={<CardDetailsPage isDarkTheme={isDarkTheme} />} />
+            <Route path="/card/:race" element={<MoreCardsPage isDarkTheme={isDarkTheme} />} />
+          </Routes>
+        </Container>
+        <Copyright />
       </Router>
     </ThemeProvider>
   );

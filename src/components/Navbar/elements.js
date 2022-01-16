@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Container } from '../../styles/globalStyles'
 
 export const NavDesktop = styled.nav`
     background: ${(props) => props.theme.background};
@@ -37,8 +36,18 @@ export const NavbarContainerDesktop = styled.div`
     display: flex;
     justify-content: space-between;
     height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 20px;
+    padding-left: 20px;
 
-    ${Container}
+    @media screen and (max-width: 991px) {  
+        padding-right: 30px;
+        padding-left: 30px; 
+    }
 `
 
 export const NavLogo = styled(Link)`
