@@ -1,24 +1,26 @@
-/* 
-  COMO CRIAR UM CONTEXTO 
-  1 - Importar createContext do react
-  2 - atribui createContext para uma variável
-    Ex: export const CartContext = createContext([]);
-  3 - Criar o Provider
-  4 - Importar o Provider no App.js
-  5 - Consumir o contexto usando o useContex 
-  ...
-*/
-
-import { createContext, useEffect, useState } from "react"; // 1 
+import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
-export const CartContext = createContext([]); // 2
+export const CartContext = createContext([]);
 
 export function CartProvider({ children }) {
 
-  const [cart, setCart] = useState([])
+  const [total, setTotal] = useState(0)
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) != null
+      ? JSON.parse(localStorage.getItem("cart"))
+      : []
+  )
 
-  console.log(cart)
+  useEffect(()=> {
+    let sum = 0
+
+    cart.map((cart) => (
+      sum = parseFloat(sum) + parseFloat(cart.card_prices[0].amazon_price))
+    )
+  
+    setTotal(sum)
+  }, [cart])
 
   function handleAddCart(card) {
 
@@ -37,28 +39,20 @@ export function CartProvider({ children }) {
       if (item.idCard === idCard) {
         return false
       } else {
-        return true 
+        return true
       }
     })
     setCart(cartFiltered)
     localStorage.setItem("cart", JSON.stringify(cartFiltered));
-    alert('Removido do item')
   }
-
-  useEffect(() => {
-    function handleGetItensLocalStorage() {
-      const storedArray = JSON.parse(localStorage.getItem("cart"));
-      setCart(storedArray || [])
-    }
-    handleGetItensLocalStorage();
-  }, [])
 
   return (
     <CartContext.Provider
       value={{
         cart: cart,
         addItem: handleAddCart,
-        removeItem: handleRemoveItemInCart
+        removeItem: handleRemoveItemInCart,
+        total
       }}>
       {children}
     </CartContext.Provider>
