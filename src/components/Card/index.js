@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { useNavigate } from "react-router";
+import { CartContext } from '../../contexts/Cart';
 import {
     ContainerCarousel,
     AddCartIcon,
@@ -9,6 +10,7 @@ import {
 
 const Card = ({ card, index }) => {
 
+    const {addItem} = useContext(CartContext)
     const handleDragStart = (e) => e.preventDefault();
     const navigate = useNavigate();
 
@@ -23,7 +25,11 @@ const Card = ({ card, index }) => {
             <img onClick={() => navigate(`/card/${card.race}/${card.id}`)} key={index} src={card.card_images[0].image_url_small} alt="Card" onDragStart={handleDragStart} />
             <p>R$<span>{card.card_prices[0].amazon_price}</span></p>
             <ContainerButtons>
-                <AddCartIcon />
+                <AddCartIcon
+                    onClick={() => {
+                        addItem(card)
+                    }}
+                />
                 <AddFavIcon />
             </ContainerButtons>
         </ContainerCarousel>

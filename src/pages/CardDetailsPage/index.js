@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { getCards } from '../../services/Api'
+import { CartContext } from '../../contexts/Cart';
 import {
     ContainerImages,
     ErrorImg,
@@ -27,6 +28,7 @@ import {
 
 const CardDetailsPage = ({ isDarkTheme }) => {
 
+    const { addItem } = useContext(CartContext)
     const params = useParams();
     const [cardInfo, setCardInfo] = useState([]);
     const [loaded, setLoaded] = useState(false)
@@ -77,7 +79,11 @@ const CardDetailsPage = ({ isDarkTheme }) => {
                         <Defense>{`Defesa: ${cardInfo[0].def}`}</Defense>
                         <Price>{`Preço: R$ ${cardInfo[0].card_prices[0].amazon_price}`}</Price>
                         <ContainerButtons>
-                            <AddCartIcon />
+                            <AddCartIcon
+                                onClick={() => {
+                                    addItem(cardInfo[0])
+                                }}
+                            />
                             <AddFavIcon />
                         </ContainerButtons>
                     </ContainerDescription>
