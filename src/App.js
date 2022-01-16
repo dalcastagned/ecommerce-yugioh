@@ -21,8 +21,8 @@ function App() {
 
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <Router>
-      <GlobalStyle />
-      <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
+        <GlobalStyle />
+        <Navbar isDarkTheme={isDarkTheme} setIsDarkTheme={setIsDarkTheme} />
       </Router>
     </ThemeProvider>
   );
