@@ -11,7 +11,7 @@ export const NavDesktop = styled.nav`
     border-bottom: 2px solid ${(props) => props.theme.border};
     z-index: 999;
     width: 100%;
-    padding: 0 16px;
+    padding-left: 16px;
 `
 
 export const NavMobile = styled.nav`
@@ -43,11 +43,6 @@ export const NavbarContainerDesktop = styled.div`
     margin-right: auto;
     padding-right: 20px;
     padding-left: 20px;
-
-    @media screen and (max-width: 991px) {  
-        padding-right: 30px;
-        padding-left: 30px; 
-    }
 `
 
 export const NavLogo = styled(Link)`
@@ -85,7 +80,7 @@ export const NavMenuMobile = styled.ul`
     display: grid;
     list-style: none;
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
 `
 

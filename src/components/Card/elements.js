@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { FaCartPlus, FaHeart } from 'react-icons/fa';
+import { FaCartPlus } from 'react-icons/fa';
 
 export const ContainerCarousel = styled.div`
     width: 250px;
@@ -50,12 +50,6 @@ export const ContainerCarousel = styled.div`
 
 
 export const AddCartIcon = styled(FaCartPlus)`
-    color: ${(props) => props.theme.text};
-    font-size: 25px;
-    cursor: pointer;
-`
-
-export const AddFavIcon = styled(FaHeart)`
     color: ${(props) => props.theme.text};
     font-size: 25px;
     cursor: pointer;

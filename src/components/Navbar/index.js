@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaHome, FaShoppingCart, FaHeart } from 'react-icons/fa'
+import { FaHome, FaShoppingCart } from 'react-icons/fa'
 import {
     NavDesktop,
     NavbarContainerDesktop,
@@ -47,13 +47,6 @@ const Navbar = ({ isDarkTheme, setIsDarkTheme }) => {
                             </NavLinksDesktop>
                         </NavItemDesktop>
                         <NavItemDesktop>
-                            <NavLinksDesktop to='/favoritos'>
-                                <div>
-                                    <FaHeart className='icon' />
-                                </div>
-                            </NavLinksDesktop>
-                        </NavItemDesktop>
-                        <NavItemDesktop>
                             {isDarkTheme
                                 ? <ThemeButton onClick={changeTheme}><LightIcon /></ThemeButton>
                                 : <ThemeButton onClick={changeTheme}><DarkIcon /> </ThemeButton>
@@ -75,13 +68,6 @@ const Navbar = ({ isDarkTheme, setIsDarkTheme }) => {
                             <NavLinksMobile to='/carrinho'>
                                 <div>
                                     <FaShoppingCart className='icon' />
-                                </div>
-                            </NavLinksMobile>
-                        </NavItemMobile>
-                        <NavItemMobile $border={true}>
-                            <NavLinksMobile to='/favoritos'>
-                                <div>
-                                    <FaHeart className='icon' />
                                 </div>
                             </NavLinksMobile>
                         </NavItemMobile>

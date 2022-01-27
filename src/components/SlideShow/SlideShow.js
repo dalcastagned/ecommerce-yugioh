@@ -6,6 +6,7 @@ import Card from '../Card';
 import {
   Container,
   ContainerTitle,
+  ContainerCarousel
 } from './elements'
 
 const SlideShow = ({ cards }) => {
@@ -36,7 +37,9 @@ const SlideShow = ({ cards }) => {
           Ver Mais
         </button>
       </ContainerTitle>
-      <AliceCarousel mouseTracking disableButtonsControls={true} items={items} responsive={responsive} disableDotsControls={true} paddingRight={10} />
+      <ContainerCarousel>
+        <AliceCarousel mouseTracking disableButtonsControls={true} items={items} responsive={responsive} disableDotsControls={true} paddingRight={10} />
+      </ContainerCarousel>
     </Container>
   )
 }

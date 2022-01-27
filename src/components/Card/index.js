@@ -4,7 +4,6 @@ import { CartContext } from '../../contexts/Cart';
 import {
     ContainerCarousel,
     AddCartIcon,
-    AddFavIcon,
     ContainerButtons,
 } from './elements'
 
@@ -30,7 +29,6 @@ const Card = ({ card, index }) => {
                         addItem(card)
                     }}
                 />
-                <AddFavIcon />
             </ContainerButtons>
         </ContainerCarousel>
     )
