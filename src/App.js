@@ -12,6 +12,7 @@ import FavoritesPage from "./pages/FavoritesPage";
 import CardDetailsPage from "./pages/CardDetailsPage";
 import MoreCardsPage from "./pages/MoreCardsPage";
 import Copyright from "./components/Copyright";
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
@@ -44,6 +45,10 @@ function App() {
           <Copyright />
         </Router>
       </CartProvider>
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
     </ThemeProvider>
   );
 }

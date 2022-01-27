@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect } from "react";
+import toast from "react-hot-toast";
 import { v4 as uuidv4 } from 'uuid';
 
 export const CartContext = createContext([]);
@@ -31,7 +32,7 @@ export function CartProvider({ children }) {
 
     setCart([...cart, newCard])
     localStorage.setItem("cart", JSON.stringify([...cart, card]));
-    alert('Adicionado no carrinho')
+    toast.success('Adicionado ao Carrinho')
   }
 
   function handleRemoveItemInCart(idCard) {
