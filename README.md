@@ -1,4 +1,4 @@
-<h1 align="center">Bem-Vindo(a) ao projeto Ecommerce Yu-Gi-Oh! (em desenvolvimento) 👋</h1>
+<h1 align="center">Bem-Vindo(a) ao projeto Ecommerce Yu-Gi-Oh! 👋</h1>
 
 ## Preview
 <p align="left">https://ecommerce-yugioh.vercel.app/</p>
